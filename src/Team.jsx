@@ -65,7 +65,7 @@ return (
 				</div>
 			</div>
 
-			<div className="container">
+
 				{/*Container de team*/}
 				<div className="box justify-center">
 					<div className='custom-center'>
@@ -99,7 +99,6 @@ return (
 					</div>
 				</div>
 			</div>
-		</div>
 	</div>
 );
 }
