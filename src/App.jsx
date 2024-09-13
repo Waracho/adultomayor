@@ -85,69 +85,14 @@ function App() {
             </div>
           </div>
         </nav>
-        <main className="h-full flex-grow flex items-center justify-center">
-          {renderContent()}
-        </main>
+        <div className="flex-grow overflow-y-auto flex flex-col items-center justify-center h-full">
+          {renderContent()}    
+          <footer className="h-[20%] flex items-center justify-center">
+            I am the footer
+          </footer>
+        </div>
       </div>
   );
 }
 
 export default App;
-
-/*
-<div className="flex flex-col min-h-screen bg-gray-100">
-      
-      <nav className="h-[10vh] flex flex-row bg-canaria-blue text-white py-4 shadow-lg">
-        <img 
-          className='h-full'
-          src={canaria_icon}/>
-        <ul className="h-full flex flex-grow justify-center space-x-10">
-          <li>
-            <button
-              className={`text-[100%] leading-[100%] px-4 py-2 focus:outline-none ${
-                activeTab === 'home' ? 'border-b-2 border-white' : ''
-              }`}
-              onClick={() => setActiveTab('home')}
-            >
-              Inicio
-            </button>
-          </li>
-          <li>
-            <button
-              className={`text-[100%] leading-[100%] px-4 py-2 focus:outline-none ${
-                activeTab === 'about' ? 'border-b-2 border-white' : ''
-              }`}
-              onClick={() => setActiveTab('about')}
-            >
-              Sobre Canaria
-            </button>
-          </li>
-          <li>
-            <button
-              className={`text-[100%] leading-[100%] px-4 py-2 focus:outline-none ${
-                activeTab === 'team' ? 'border-b-2 border-white' : ''
-              }`}
-              onClick={() => setActiveTab('team')}
-            >
-              Nuestro Equipo
-            </button>
-          </li>
-          <li>
-            <button
-              className={`text-[100%] leading-[100%] px-4 py-2 focus:outline-none ${
-                activeTab === 'contact' ? 'border-b-2 border-white' : ''
-              }`}
-              onClick={() => setActiveTab('contact')}
-            >
-              Contacto
-            </button>
-          </li>
-        </ul>
-      </nav>
-
-      
-      <main className="h-full flex-grow flex items-center justify-center">
-        {renderContent()}
-      </main>
-    </div>
-*/

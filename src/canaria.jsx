@@ -1,7 +1,7 @@
 const Canaria = () => {
 
     return (
-        <div className="p-4">Este es el contenido de Sobre Canaria.</div>
+        <div className="h-[80%] flex flex-col items-center justify-center">Este es el contenido de Sobre Canaria.</div>
     )
 }
 

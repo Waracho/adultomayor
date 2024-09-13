@@ -1,7 +1,7 @@
 const Contacto = () => {
 
     return (
-        <div className="p-4">Este es el contenido de Contacto.</div>
+        <div className="h-[80%] flex flex-col items-center justify-center">Este es el contenido de Contacto.</div>
     )
 }
 
