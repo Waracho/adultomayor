@@ -1,0 +1,55 @@
+/* Team.css */
+
+/* Estilo para la fila (pantallas grandes) */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+  
+.box {
+  background: linear-gradient(100deg, rgba(59, 83, 214, 0.4), rgba(74, 250, 250, 0.4));
+  color: white;
+  padding: 10px;
+  margin: 3px;
+  flex: 1;
+  text-align: center;
+  max-width: 300px;
+  border-radius: 1%;
+}
+
+  
+/* Ajuste para pantallas pequeñas (columna) */
+@media (max-width: 786px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .box {
+    width: 300px;
+  }
+}
+
+/* Para centrar la imagen dentro del contenedor */
+.image-container {
+  display: flex;
+  justify-content: center;  /* Centra horizontalmente */
+  align-items: center;      /* Centra verticalmente */
+  height: 100%;             /* Asegura que el contenedor tenga altura para centrar verticalmente */
+}
+
+.custom-image {
+  width: 250px;            /* Ajusta el ancho solo para esta imagen */
+  height: 250px;            /* Mantiene las proporciones de la imagen */
+  border-radius: 10px;     /* Bordes redondeados */
+  min-width: 250px;
+  min-height: 250px;
+  border-radius: 20% 80% 20% 80% / 80% 20% 80% 20%  ;
+}
+
+/*Box de información*/
+.custom-center {
+  display: flex;
+  justify-content: center;
+}
