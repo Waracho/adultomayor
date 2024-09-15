@@ -9,7 +9,7 @@ import { Persona } from './Persona';
 
 const Team = () => {
 return (
-	<div className="flex flex-col flex-grow w-[80%]">
+	<div className="flex flex-col flex-grow w-full px-24">
 		<div className=" text-5xl py-5">
 			Conoce a nuestro equipo
 		</div>

@@ -1,7 +1,7 @@
 const Contacto = () => {
 
     return (
-        <div className="flex flex-col flex-grow w-[80%]">
+        <div className="flex flex-col flex-grow w-full px-24">
             <div className=" text-5xl py-5">
                 Contacto
             </div>
