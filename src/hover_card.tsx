@@ -1,4 +1,6 @@
 import canaria_icon from './assets/canaria_icon.png';
+import mine_truck from './assets/mine_truck.jpg'
+import mine_truck_2 from './assets/mine_truck_2.jpg'
 import React, { useRef } from "react";
 import {
   motion,
@@ -10,23 +12,63 @@ import {
 
 const Example = () => {
   return (
-    
-    <div className="text-white flex flex-row gap-20 w-full place-content-end border-canaria-home rounded-canaria-home border-canaria-white pr-40 bg-gradient-to-br bg-canaria-yellow py-12">
-      <div className='flex flex-col'>
-      <h1 className='text-7xl'>Monitoreo 
-      en tiempo real</h1>
-      <p>Agiliza tu detección de polvo con un sofisticado modelo de Inteligencia Artificial</p>
+    <div className='flex flex-col'>
+      <div className="text-white flex flex-row px-20 gap-20 w-full border-canaria-home rounded-canaria-home border-canaria-white bg-gradient-to-br bg-canaria-yellow py-12">
+        <div className='basis-3/4 grid grid-cols-1 gap-2'>
+          <h1 className='text-7xl font-semibold' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}>Contexto</h1>
+          <p className="text-2xl font-semibold text-white my-4 md:my-6"
+            style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)' }}>
+            El polvo en suspensión es un desafío constante 
+            en la actividad minera, afectando la salud de los trabajadores 
+            y las comunidades cercanas. Esto hace que las medidas de mitigación 
+            sean de gran importancia, pero actualmente, estas no tienen una forma 
+            simple de saber si son efectivas o no.</p>
+        </div>  
+        <TiltCard select_img='1' />
       </div>
-      <TiltCard />
+        <div className="text-white flex flex-row px-20 gap-20 w-full place-content-end border-canaria-home rounded-canaria-home border-canaria-white bg-gradient-to-br bg-canaria-yellow py-12">
+        <div className='basis-1/4'> 
+          <TiltCard select_img='2'/>
+        </div>
+        <div className='grid grid-cols-1 gap-2'>
+          <h1 className='text-7xl font-semibold' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}>Solución</h1>
+          <p className="text-2xl font-semibold text-white my-4 md:my-6"
+            style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)' }}>
+            CanarIA 
+            es un software basado en inteligencia artificial que ayuda a medir 
+            la efectividad de medidas de mitigación para el control de polvo en 
+            mineras, además de  levantar alertas, enviar notificaciones y generar 
+            métricas para futuro uso de los encargados. Esto lo logra a través de la 
+            detección de polvo utilizando redes neuronales.</p>
+        </div>  
+      </div>
+      <div className='flex flex-row px-20 gap-20 w-full place-content-end border-canaria-home rounded-canaria-home border-canaria-white bg-gradient-to-br bg-canaria-yellow py-12'>
+        <div className='basis-3/4 grid grid-cols-1 gap-2'>
+          <h1 className='text-white text-7xl font-semibold' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}>
+            Ve nuestro video <br/>
+            Promocional
+          </h1>
+        </div> 
+        <div className="video-container">
+          <iframe
+            width="560"
+            height="315"
+            src={'https://youtube.com/embed/Ywz6RGaL2d0'}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </div>
     </div>
-    
   );
 };
 
 const ROTATION_RANGE = 32.5;
 const HALF_ROTATION_RANGE = 32.5 / 2;
 
-const TiltCard = () => {
+const TiltCard = ({select_img}) => {
   //const ref = useRef(null);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -92,7 +134,15 @@ const TiltCard = () => {
           }}
           className="text-center text-2xl font-bold"
         >
+          {select_img === '1' && <>
+          <img className='ml-6 mb-4' src={mine_truck} />
+          <img className='ml-6' src={mine_truck_2} />
+          </>
+          }
+          {select_img === '2' && <>
           <img src={canaria_icon} />
+          </>
+          }
         </p>
       </div>
     </motion.div>
